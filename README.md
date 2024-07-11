@@ -1,10 +1,9 @@
 ## Simulation
-The following is one of the runs using snell law, where we have the following set up \n   
-entry_point = (1, 2, 0)  # Example entry point on the top surface     \n 
-incident_vector = (1, 3, 3)  # Incident light vector     \n 
-thickness = 6.66  # Thickness of the glass in mm    \n 
-refractive_index = 1.47  # Refractive index of the glass \n 
-\n
+The following is one of the runs using snell law, where we have the following set up:   
+entry_point = (1, 2, 0)  # Example entry point on the top surface    
+incident_vector = (1, 3, 3)  # Incident light vector     
+thickness = 6.66  # Thickness of the glass in mm    
+refractive_index = 1.47  # Refractive index of the glass  
 
 ![Figure-01](refraction_simulation.png)    
 
@@ -78,4 +77,4 @@ Since the angle between **n**, **t** is less than $`\pi/2`$, we keep the plus si
 
 ```math
 \mathbf{t} = \sqrt{1 - \mu^2 \left[ 1 - (\mathbf{n} \cdot \mathbf{i})^2 \right]} \mathbf{n} + \mu \left[ \mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n} \right]
-\]
+```
