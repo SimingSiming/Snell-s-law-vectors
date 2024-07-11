@@ -1,3 +1,13 @@
+## Command to run Snell Law
+You can either open refraction_point.ipynb file to run it in jupyter notebook    
+
+or    
+
+you can run python command 
+```python
+python3 snell_law.py
+```
+
 ## Simulation
 The following is one of the runs using snell law, where we have the following set up:   
 entry_point = (1, 2, 0)  # Example entry point on the top surface    
