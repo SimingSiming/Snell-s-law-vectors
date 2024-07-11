@@ -43,10 +43,10 @@ Now, Snell's Law is expressed as:
 Equation (1) combined with (2) and (3) yields:
 
 ```math
-\mathbf{t} = (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} + \mu [\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}]
+\mathbf{t} = (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} + \mu [\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}] \tag{4}
 ```
 
-Taking norms in (7), and since the vector $` (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} `$ is normal to the vector $` [\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}] `$:
+Taking norms in (4), and since the vector $` (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} `$ is normal to the vector $` [\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}] `$:
 
 ```math
 \|\mathbf{t}\|^2 = (\mathbf{n} \cdot \mathbf{t})^2 + \mu^2 \|\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}\|^2
@@ -64,7 +64,7 @@ So:
 (\mathbf{n} \cdot \mathbf{t}) = \pm \sqrt{1 - \mu^2 \left[ 1 - (\mathbf{n} \cdot \mathbf{i})^2 \right]}
 ```
 
-Since the angle between **n**, **t** is less than \(\pi/2\), we keep the plus sign in (10), and (7) yields finally:
+Since the angle between **n**, **t** is less than $`\pi/2`$, we keep the plus sign in (10), and (7) yields finally:
 
 ```math
 \mathbf{t} = \sqrt{1 - \mu^2 \left[ 1 - (\mathbf{n} \cdot \mathbf{i})^2 \right]} \mathbf{n} + \mu \left[ \mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n} \right]
