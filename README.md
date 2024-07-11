@@ -47,7 +47,7 @@ Equation (4) combined with (5) and (6) yields:
 \mathbf{t} = (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} + \mu [\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}]
 ```
 
-Taking norms in (7), and since the vector $ (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} $ is normal to the vector $[\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}]$:
+Taking norms in (7), and since the vector $` (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} `$ is normal to the vector $` [\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}] `$:
 
 ```math
 \|\mathbf{t}\|^2 = (\mathbf{n} \cdot \mathbf{t})^2 + \mu^2 \|\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}\|^2
