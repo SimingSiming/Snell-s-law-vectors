@@ -3,9 +3,9 @@ citation: Thanks to a StackExchange Post that shows the induction of Shell's Law
 
 Components with respect to **n**
 
-$$
+```math
 \mathbf{r} = \mathbf{r}_{\parallel} + \mathbf{r}_{\perp}
-$$
+```
 
 One parallel and the other normal to axis **n** respectively:
 
