@@ -26,22 +26,21 @@ That is:
 The vectors **t**, **i** are decomposed as follows:
 
 ```math
-\mathbf{t} = (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} + (\mathbf{n} \times \mathbf{t}) \times \mathbf{n}
+\mathbf{t} = (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} + (\mathbf{n} \times \mathbf{t}) \times \mathbf{n}  \tag{1}
 ```
 
 ```math
-\mathbf{i} = (\mathbf{n} \cdot \mathbf{i}) \mathbf{n} + (\mathbf{n} \times \mathbf{i}) \times \mathbf{n}
+\mathbf{i} = (\mathbf{n} \cdot \mathbf{i}) \mathbf{n} + (\mathbf{n} \times \mathbf{i}) \times \mathbf{n}  \tag{2}
 ```
 
 Now, Snell's Law is expressed as:
 
 ```math
-(\mathbf{n} \times \mathbf{t}) = \mu (\mathbf{n} \times \mathbf{i})
+(\mathbf{n} \times \mathbf{t}) = \mu (\mathbf{n} \times \mathbf{i}) \tag{3}
 ```
 
-See Figure-02 in the bottom.
 
-Equation (4) combined with (5) and (6) yields:
+Equation (1) combined with (2) and (3) yields:
 
 ```math
 \mathbf{t} = (\mathbf{n} \cdot \mathbf{t}) \mathbf{n} + \mu [\mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n}]
