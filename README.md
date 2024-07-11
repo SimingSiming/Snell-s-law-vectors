@@ -61,10 +61,10 @@ or:
 So:
 
 ```math
-(\mathbf{n} \cdot \mathbf{t}) = \pm \sqrt{1 - \mu^2 \left[ 1 - (\mathbf{n} \cdot \mathbf{i})^2 \right]}
+(\mathbf{n} \cdot \mathbf{t}) = \pm \sqrt{1 - \mu^2 \left[ 1 - (\mathbf{n} \cdot \mathbf{i})^2 \right]} \tag{5}
 ```
 
-Since the angle between **n**, **t** is less than $`\pi/2`$, we keep the plus sign in (10), and (7) yields finally:
+Since the angle between **n**, **t** is less than $`\pi/2`$, we keep the plus sign in (5), and (4) yields finally:
 
 ```math
 \mathbf{t} = \sqrt{1 - \mu^2 \left[ 1 - (\mathbf{n} \cdot \mathbf{i})^2 \right]} \mathbf{n} + \mu \left[ \mathbf{i} - (\mathbf{n} \cdot \mathbf{i}) \mathbf{n} \right]
