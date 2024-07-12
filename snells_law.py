@@ -1,19 +1,14 @@
 import numpy as np
 import plotly.graph_objects as go
 
-def calculate_exit_point(entry_point, incident_vector, thickness, refractive_index):
+def calculate_exit_point(entry_point, incident_vector, thickness, normal, n1, n2):
+    normal = np.array(normal)
     # Normalize vectors
     incident_vector = np.array(incident_vector)
     incident_vector = incident_vector / np.linalg.norm(incident_vector)
     
     entry_point = np.array(entry_point)
     
-    # Surface normal (assuming the top surface is the xy-plane)
-    normal = np.array([0, 0, 1])
-    
-    # Refractive indices
-    n1 = 1  # Air
-    n2 = refractive_index  # Glass
     mu = n1 / n2
     
     # Calculate dot products
@@ -39,7 +34,7 @@ def calculate_exit_point(entry_point, incident_vector, thickness, refractive_ind
 
     return exit_point, transmitted_vector
 
-def visualize_reflection(entry_point, incident_vector, exit_point, marker_size):
+def visualize_reflection(entry_point, incident_vector, thickness, exit_point, normal, marker_size):
 
     unit_incident_vecotr = np.array(incident_vector) / np.linalg.norm(incident_vector)
     
@@ -54,7 +49,7 @@ def visualize_reflection(entry_point, incident_vector, exit_point, marker_size):
 
 
     # Data for the light path if there were no glass
-    normal = np.array([0,0,1]) 
+    normal = np.array(normal)
     no_glass_exit_point = entry_point +  unit_incident_vecotr * thickness / np.dot(unit_incident_vecotr, normal)
     x_data_no_glass = [entry_point[0], no_glass_exit_point[0]]
     y_data_no_glass = [entry_point[1], no_glass_exit_point[1]]
@@ -133,16 +128,19 @@ def visualize_reflection(entry_point, incident_vector, exit_point, marker_size):
 
 
 # Parameters
-entry_point = (1, 2, 0)  # Example entry point on the top surface
-incident_vector = (1, 3, 3)  # Incident light vector
+entry_point = (0, 0, 0)  # Example entry point on the top surface
+incident_vector = (-1, 0,1)  # Incident light vector
+normal = (0,0,1)
 thickness = 6.66  # Thickness of the glass in mm
-refractive_index = 1.47  # Refractive index of the glass
+n1 = 1
+n2 = 1.47
+
 
 # Calculate the exit point
-exit_point, transmitted_vector = calculate_exit_point(entry_point, incident_vector, thickness, refractive_index)
+exit_point, transmitted_vector = calculate_exit_point(entry_point, incident_vector, thickness, normal, n1, n2)
 
 if exit_point is not None:
     print("Exit Point:", exit_point)
     print("Transmitted Vector:", transmitted_vector)
 
-visualize_reflection(entry_point, incident_vector, exit_point, 3)
+visualize_reflection(entry_point, incident_vector, thickness, exit_point, normal, 3)

@@ -1,19 +1,25 @@
 ## Command to run Snell Law
-You can either open refraction_point.ipynb file to run it in jupyter notebook    
-
-or    
-
-you can run python command 
-```python
+Simply Run the following command
+```linux
 python3 snell_law.py
+```
+
+## Test Code
+Run to test if the script meets the criterion of Snell's Law if the script got modified.
+```linux
+pytest test_calculate_exit_point.py 
 ```
 
 ## Simulation
 The following is one of the runs using snell law, where we have the following set up:   
-entry_point = (1, 2, 0)  # Example entry point on the top surface    
-incident_vector = (1, 3, 3)  # Incident light vector     
-thickness = 6.66  # Thickness of the glass in mm    
-refractive_index = 1.47  # Refractive index of the glass  
+
+# Parameters
+entry_point = (0, 0, 0)  # Example entry point on the top surface
+incident_vector = (-1, 0,1)  # Incident light vector
+normal = (0,0,1)
+thickness = 6.66  # Thickness of the glass in mm
+n1 = 1
+n2 = 1.47
 
 ![Figure-01](refraction_simulation.png)    
 
