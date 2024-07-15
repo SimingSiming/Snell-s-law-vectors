@@ -15,7 +15,7 @@ The following is one of the runs using snell law, where we have the following se
 
 # Parameters
 entry_point = (0, 0, 0)  # Example entry point on the top surface
-incident_vector = (-1, 0,1)  # Incident light vector
+incident_vector = (-1, 0,-1)  # Incident light vector
 normal = (0,0,1)
 thickness = 6.66  # Thickness of the glass in mm
 n1 = 1
