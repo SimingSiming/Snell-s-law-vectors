@@ -108,7 +108,7 @@ def test_calculate_exit_point(case):
     assert np.allclose(expected_height, height, atol = 0.001), f"expected height {expected_height}, but got {height}"
 
     ## exit point test
-    excpted_exit_point = transmitted_vector * thickness / np.dot(transmitted_vector, normal) + entry_point
+    excpted_exit_point = transmitted_vector * thickness / (-np.dot(transmitted_vector, normal)) + entry_point
     assert np.allclose(exit_point, excpted_exit_point , atol=0.001), f"Expected exit point {excpted_exit_point} but got {exit_point}"
 
 
