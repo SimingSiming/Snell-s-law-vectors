@@ -22,7 +22,7 @@ def calculate_exit_point(entry_point, incident_vector, thickness, normal, n1, n2
         print("Total internal reflection occurs.")
         return None, None
     
-    n_dot_t = np.sqrt(term_under_sqrt)
+    n_dot_t = -np.sqrt(term_under_sqrt)
     t_parallel = mu * (incident_vector - n_dot_i * normal)
     t_perpendicular = n_dot_t * normal
 
@@ -30,7 +30,7 @@ def calculate_exit_point(entry_point, incident_vector, thickness, normal, n1, n2
 
     # Calculate the exit point
     # Move from the entry point along the refracted vector by the thickness of the glass
-    exit_point = entry_point + transmitted_vector * (thickness / np.dot(transmitted_vector, normal))
+    exit_point = entry_point + transmitted_vector * (thickness / (-np.dot(transmitted_vector, normal)))
 
     return exit_point, transmitted_vector
 
@@ -42,7 +42,7 @@ def visualize_reflection(entry_point, incident_vector, thickness, exit_point, no
     x_data_incident = [entry_point[0] - unit_incident_vecotr[0], entry_point[0]]
     y_data_incident = [entry_point[1] - unit_incident_vecotr[1], entry_point[1]]
     z_data_incident = [entry_point[2] - unit_incident_vecotr[2], entry_point[2]]
-    
+
     x_data_refracted = [entry_point[0], exit_point[0]] if exit_point is not None else []
     y_data_refracted = [entry_point[1], exit_point[1]] if exit_point is not None else []
     z_data_refracted = [entry_point[2], exit_point[2]] if exit_point is not None else []
@@ -50,7 +50,7 @@ def visualize_reflection(entry_point, incident_vector, thickness, exit_point, no
 
     # Data for the light path if there were no glass
     normal = np.array(normal)
-    no_glass_exit_point = entry_point +  unit_incident_vecotr * thickness / np.dot(unit_incident_vecotr, normal)
+    no_glass_exit_point = entry_point +  unit_incident_vecotr * thickness / (-np.dot(unit_incident_vecotr, normal))
     x_data_no_glass = [entry_point[0], no_glass_exit_point[0]]
     y_data_no_glass = [entry_point[1], no_glass_exit_point[1]]
     z_data_no_glass = [entry_point[2], no_glass_exit_point[2]]
@@ -116,7 +116,7 @@ def visualize_reflection(entry_point, incident_vector, thickness, exit_point, no
         scene=dict(
             xaxis_title='X Axis',
             yaxis_title='Y Axis',
-            zaxis=dict(title='Z Axis', autorange='reversed'),  # Invert the z-axis
+            zaxis_title='Z Axis', 
         ),
         title='Refraction of Light Through Glass',
         showlegend=True
@@ -129,7 +129,7 @@ def visualize_reflection(entry_point, incident_vector, thickness, exit_point, no
 
 # Parameters
 entry_point = (0, 0, 0)  # Example entry point on the top surface
-incident_vector = (-1, 0,1)  # Incident light vector
+incident_vector = (-1, 0,-1)  # Incident light vector
 normal = (0,0,1)
 thickness = 6.66  # Thickness of the glass in mm
 n1 = 1
